@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatima Ejaz | Software Engineer & Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a; /* Deep Slate */
+            --accent: #3b82f6;  /* Bright Blue */
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --bg-body: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Hero --- */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: -1px;
+            font-weight: 800;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Layout --- */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: -50px auto 0;
+            padding-bottom: 60px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        h2::after {
+            content: "";
+            height: 2px;
+            flex-grow: 1;
+            background: #e2e8f0;
+        }
+
+        /* --- Cards --- */
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid #f1f5f9;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Skills Grid --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .skill-category h4 {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .skills-tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skills-tag-container span {
+            background: var(--white);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* --- Project List --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .project-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.2rem; }
+        }
+
+        .project-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* --- Buttons & Links --- */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background-color: #0A66C2;
+            color: white !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white !important;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fatima Ejaz</h1>
+    <p>Software Engineering Undergraduate & Aspiring Data Analyst. Passionate about AI-driven solutions and scalable architecture.</p>
+</header>
+
+<div class="container">
+
+    <section id="summary">
+        <div class="card">
+            <h2>Professional Summary</h2>
+            <p style="font-size: 1.1rem; color: var(--text-main);">
+                Motivated Software Engineering student with specialized interest in <b>Data Science</b> and <b>Mobile Development</b>. 
+                Proven track record in building full-stack applications with Flutter and Python, with a deep focus on creating 
+                secure, data-driven systems.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Expertise</h2>
+        <div class="card">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <div class="skills-tag-container">
+                        <span>Python</span><span>Java</span><span>C++</span><span>SQL</span><span>PHP</span><span>JS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Development</h4>
+                    <div class="skills-tag-container">
+                        <span>Flutter</span><span>HTML/CSS</span><span>Web Dev</span><span>OOP</span><span>DSA</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <div class="skills-tag-container">
+                        <span>MySQL</span><span>Oracle</span><span>MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Data & AI</h4>
+                    <div class="skills-tag-container">
+                        <span>Data Analysis</span><span>AI Fundamentals</span><span>UML</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <h3 style="margin:0; color: var(--accent);">Data Science Intern</h3>
+                    <b style="color: var(--primary);">Arch Technology</b>
+                </div>
+                <span style="color: var(--text-light); font-size: 0.9rem;">July 2025 – August 2025</span>
+            </div>
+            <p style="margin-top: 15px; color: var(--text-light);">
+                Optimized data workflows using Python and SQL. Focused on data cleaning, exploratory data analysis (EDA), and building visualization dashboards to assist in executive reporting.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Key Projects</h2>
+        <div class="project-grid">
+            <div class="card project-card">
+                <h3><i class="fas fa-microchip"></i> Fake News Detection</h3>
+                <p>An AI-powered web platform designed to verify news authenticity using NLP and machine learning concepts.</p>
+            </div>
+            <div class="card project-card">
+                <h3><i class="fas fa-mobile-alt"></i> Blood Donation App</h3>
+                <p>Cross-platform Flutter application featuring real-time requests and donor-recipient matching.</p>
+            </div>
+            <div class="card project-card">
+                <h3><i class="fas fa-shield-alt"></i> Attack Handling System</h3>
+                <p>Information security tool that detects unauthorized hacking attempts and temporarily blocks suspicious hardware.</p>
+            </div>
+            <div class="card project-card">
+                <h3><i class="fas fa-database"></i> Inventory Management</h3>
+                <p>High-performance C++ system for tracking warehouse stock, orders, and logistics.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="card" style="text-align: center;">
+            <p>I am currently open to internship opportunities and junior developer roles.</p>
+            <p><strong><i class="fas fa-map-marker-alt"></i> Okara, Pakistan</strong></p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="mailto:fomoij28@gmail.com" class="email-btn">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/fatima-ejaz-73b6a8369" target="_blank" class="linkedin-btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Fatima Ejaz | Built with Code & Passion</p>
+</footer>
+
+</body>
+</html>
